@@ -14,7 +14,7 @@ body{
         @include flex-column-center;
 
         div{
-            width: 90%;
+            width: 27rem;
             h1{
                 line-height: 1;
                 margin-bottom: 2rem;
@@ -34,6 +34,10 @@ body{
             margin-bottom: 20px;
             @include borders;
             @include flex-column-center;
+           
+            .bold-600{
+                font-weight: 600;
+            }
         }
 
         &--freeTrial{
@@ -42,6 +46,7 @@ body{
             background: #fff;
             @include flex-column-center;
             @include borders;
+
 
             form{
                 height: 80%;
@@ -54,12 +59,14 @@ body{
                 input{
                     width: 90%;
                     padding: 20px;
-                    @include borders;
+                    cursor: default;
+                    @include borders;                
                 }
 
                 input:last-of-type{
                     background: $primary-color2;
                     color: #fff;
+                    font-weight: 700;
                 }
             }
         }

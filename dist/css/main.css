@@ -24,7 +24,7 @@ body {
   align-items: center;
 }
 .half-side_left div {
-  width: 90%;
+  width: 27rem;
 }
 .half-side_left div h1 {
   line-height: 1;
@@ -45,6 +45,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.half-side_right--proVersion .bold-600 {
+  font-weight: 600;
 }
 .half-side_right--freeTrial {
   height: calc(70vh - 3rem - 20px);
@@ -67,11 +70,13 @@ body {
 .half-side_right--freeTrial form input {
   width: 90%;
   padding: 20px;
+  cursor: default;
   border-radius: 15px;
 }
 .half-side_right--freeTrial form input:last-of-type {
   background: hsl(154, 59%, 51%);
   color: #fff;
+  font-weight: 700;
 }
 
 body {
@@ -95,6 +100,10 @@ body::before {
 
 h1 {
   font-size: 3rem;
+}
+
+h5 {
+  font-weight: 400;
 }
 
 h1, h5 {
