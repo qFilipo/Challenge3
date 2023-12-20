@@ -2,10 +2,26 @@
 @import "home";
 
 body{
-    background: $primary-color1; 
     height: 100vh;
     width: 100vw;
     font-family: "Poppins", sans-serif;
+    background: $primary-color1;
+    position: relative;
+}
+
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../../images/bg-intro-desktop.png");
+    z-index: -1;
+}
+
+h1{
+    font-size: 3rem;
 }
 
 h1, h5{

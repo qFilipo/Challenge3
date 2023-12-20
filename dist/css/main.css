@@ -23,16 +23,28 @@ body {
   justify-content: center;
   align-items: center;
 }
+.half-side_left div {
+  width: 90%;
+}
+.half-side_left div h1 {
+  line-height: 1;
+  margin-bottom: 2rem;
+}
 .half-side_right {
   width: 45%;
   height: 70vh;
 }
 .half-side_right--proVersion {
+  text-align: center;
   height: 3rem;
   width: 100%;
   background: hsl(248, 32%, 49%);
   margin-bottom: 20px;
   border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .half-side_right--freeTrial {
   height: calc(70vh - 3rem - 20px);
@@ -63,10 +75,26 @@ body {
 }
 
 body {
-  background: hsl(0, 100%, 74%);
   height: 100vh;
   width: 100vw;
   font-family: "Poppins", sans-serif;
+  background: hsl(0, 100%, 74%);
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../../images/bg-intro-desktop.png");
+  z-index: -1;
+}
+
+h1 {
+  font-size: 3rem;
 }
 
 h1, h5 {

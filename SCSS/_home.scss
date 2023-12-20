@@ -12,6 +12,14 @@ body{
     &_left{
         width: 45%;
         @include flex-column-center;
+
+        div{
+            width: 90%;
+            h1{
+                line-height: 1;
+                margin-bottom: 2rem;
+            }
+        }
     }
 
     &_right{
@@ -19,11 +27,13 @@ body{
         height: 70vh;
 
         &--proVersion{
+            text-align: center;
             height: 3rem;
             width: 100%;
             background: $accent;
             margin-bottom: 20px;
             @include borders;
+            @include flex-column-center;
         }
 
         &--freeTrial{
