@@ -1,0 +1,58 @@
+body{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.half-side{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+    &_left{
+        width: 45%;
+        @include flex-column-center;
+    }
+
+    &_right{
+        width: 45%;
+        height: 70vh;
+
+        &--proVersion{
+            height: 3rem;
+            width: 100%;
+            background: $accent;
+            margin-bottom: 20px;
+            @include borders;
+        }
+
+        &--freeTrial{
+            height: calc(70vh - 3rem - 20px);
+            width: 100%;
+            background: #fff;
+            @include flex-column-center;
+            @include borders;
+
+            form{
+                height: 80%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+
+                input{
+                    width: 90%;
+                    padding: 20px;
+                    @include borders;
+                }
+
+                input:last-of-type{
+                    background: $primary-color2;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    
+}

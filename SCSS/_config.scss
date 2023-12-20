@@ -1,0 +1,25 @@
+$primary-color1: hsl(0, 100%, 74%);
+$primary-color2: hsl(154, 59%, 51%);
+$accent: hsl(248, 32%, 49%);
+$neutral1: hsl(249, 10%, 26%);
+$neutral2: hsl(246, 25%, 77%);
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@100&family=Poppins:wght@100;300;400;500;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin flex-column-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@mixin borders{
+    border-radius: 15px; 
+}

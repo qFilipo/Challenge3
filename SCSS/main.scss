@@ -1,0 +1,21 @@
+@import "config";
+@import "home";
+
+body{
+    background: $primary-color1; 
+    height: 100vh;
+    width: 100vw;
+    font-family: "Poppins", sans-serif;
+}
+
+h1, h5{
+    color: #fff;
+}
+
+h6{
+    color: $neutral2;
+}
+
+main{
+    width: 80%;
+}

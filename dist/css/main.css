@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@100&family=Poppins:wght@100;300;400;500;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.half-side {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.half-side_left {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.half-side_right {
+  width: 45%;
+  height: 70vh;
+}
+.half-side_right--proVersion {
+  height: 3rem;
+  width: 100%;
+  background: hsl(248, 32%, 49%);
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+.half-side_right--freeTrial {
+  height: calc(70vh - 3rem - 20px);
+  width: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+.half-side_right--freeTrial form {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.half-side_right--freeTrial form input {
+  width: 90%;
+  padding: 20px;
+  border-radius: 15px;
+}
+.half-side_right--freeTrial form input:last-of-type {
+  background: hsl(154, 59%, 51%);
+  color: #fff;
+}
+
+body {
+  background: hsl(0, 100%, 74%);
+  height: 100vh;
+  width: 100vw;
+  font-family: "Poppins", sans-serif;
+}
+
+h1, h5 {
+  color: #fff;
+}
+
+h6 {
+  color: hsl(246, 25%, 77%);
+}
+
+main {
+  width: 80%;
+}
