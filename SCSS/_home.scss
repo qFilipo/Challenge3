@@ -10,7 +10,7 @@ body{
     justify-content: space-evenly;
 
     &_left{
-        width: 45%;
+        width: calc(60vh - 3rem - 20px);
         @include flex-column-center;
 
         div{
@@ -23,29 +23,31 @@ body{
     }
 
     &_right{
-        width: 45%;
-        height: 70vh;
+        width: calc(60vh - 3rem - 20px);
+        height: 60vh;
 
         &--proVersion{
             text-align: center;
-            height: 3rem;
+            height: 4rem;
             width: 100%;
             background: $accent;
             margin-bottom: 20px;
             @include borders;
             @include flex-column-center;
-           
+            box-shadow: $neutral1-opacity50;
+
             .bold-600{
                 font-weight: 600;
             }
         }
 
         &--freeTrial{
-            height: calc(70vh - 3rem - 20px);
+            height: calc(60vh - 3rem - 20px);
             width: 100%;
             background: #fff;
             @include flex-column-center;
             @include borders;
+            box-shadow: $neutral1-opacity50;
 
 
             form{
@@ -55,18 +57,52 @@ body{
                 flex-direction: column;
                 justify-content: space-around;
                 align-items: center;
-
-                input{
+                div{
                     width: 90%;
-                    padding: 20px;
-                    cursor: default;
-                    @include borders;                
-                }
+                    position: relative;
 
-                input:last-of-type{
-                    background: $primary-color2;
-                    color: #fff;
-                    font-weight: 700;
+                    input{
+                        width: 100%;
+                        padding: 20px;
+                        cursor: default;
+                        @include borders2;
+                        border: 0.15px solid $neutral2;
+                    }
+    
+                    .warning{
+                        position: absolute;
+                        visibility: hidden;
+                        height: 50%;
+                        top: 25%;
+                        bottom: 25%;
+                        right: 5%;
+                    }
+
+                   .warning2{
+                        position: absolute;
+                        visibility: hidden;
+                        color: $primary-color1;
+                        font-style: italic;
+                        right: 0;
+                        bottom: -30%;
+                    }
+                }
+                div:last-of-type{
+                    input{
+                        background: $primary-color2;
+                        color: #fff;
+                        font-weight: 700;
+                        border: 2px solid darken(hsl(154, 59%, 51%), 7%);
+                        border-bottom: 4px solid darken(hsl(154, 59%, 51%), 7%)
+                    }
+                }
+            }
+
+            h6{
+                margin-top: 10px;
+                span{
+                    font-weight: 600;
+                    color: $primary-color1;
                 }
             }
         }

@@ -17,7 +17,7 @@ body {
   justify-content: space-evenly;
 }
 .half-side_left {
-  width: 45%;
+  width: calc(60vh - 3rem - 20px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,26 +31,28 @@ body {
   margin-bottom: 2rem;
 }
 .half-side_right {
-  width: 45%;
-  height: 70vh;
+  width: calc(60vh - 3rem - 20px);
+  height: 60vh;
 }
 .half-side_right--proVersion {
   text-align: center;
-  height: 3rem;
+  height: 4rem;
   width: 100%;
   background: hsl(248, 32%, 49%);
   margin-bottom: 20px;
   border-radius: 15px;
+  border: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: hsla(249, 10%, 26%, 0.2);
 }
 .half-side_right--proVersion .bold-600 {
   font-weight: 600;
 }
 .half-side_right--freeTrial {
-  height: calc(70vh - 3rem - 20px);
+  height: calc(60vh - 3rem - 20px);
   width: 100%;
   background: #fff;
   display: flex;
@@ -58,6 +60,8 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 15px;
+  border: none;
+  box-shadow: hsla(249, 10%, 26%, 0.2);
 }
 .half-side_right--freeTrial form {
   height: 80%;
@@ -67,16 +71,47 @@ body {
   justify-content: space-around;
   align-items: center;
 }
-.half-side_right--freeTrial form input {
+.half-side_right--freeTrial form div {
   width: 90%;
+  position: relative;
+}
+.half-side_right--freeTrial form div input {
+  width: 100%;
   padding: 20px;
   cursor: default;
-  border-radius: 15px;
+  border-radius: 5px;
+  border: none;
+  border: 0.15px solid hsl(246, 25%, 77%);
 }
-.half-side_right--freeTrial form input:last-of-type {
+.half-side_right--freeTrial form div .warning {
+  position: absolute;
+  visibility: hidden;
+  height: 50%;
+  top: 25%;
+  bottom: 25%;
+  right: 5%;
+}
+.half-side_right--freeTrial form div .warning2 {
+  position: absolute;
+  visibility: hidden;
+  color: hsl(0, 100%, 74%);
+  font-style: italic;
+  right: 0;
+  bottom: -30%;
+}
+.half-side_right--freeTrial form div:last-of-type input {
   background: hsl(154, 59%, 51%);
   color: #fff;
   font-weight: 700;
+  border: 2px solid #2eb279;
+  border-bottom: 4px solid #2eb279;
+}
+.half-side_right--freeTrial h6 {
+  margin-top: 10px;
+}
+.half-side_right--freeTrial h6 span {
+  font-weight: 600;
+  color: hsl(0, 100%, 74%);
 }
 
 body {
@@ -115,5 +150,51 @@ h6 {
 }
 
 main {
-  width: 80%;
+  width: 90%;
+}
+
+@media screen and (max-width: 768px) {
+  .half-side {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .half-side_left {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 425px) {
+  body::before {
+    background-image: url("../../images/bg-intro-mobile.png");
+    background-size: cover;
+  }
+  .half-side_left {
+    width: 100%;
+  }
+  .half-side_left div {
+    width: 100%;
+    text-align: center;
+  }
+  .half-side_left div h1 {
+    font-size: 2rem;
+  }
+  .half-side_right {
+    width: 100%;
+  }
+  .half-side_right--proVersion {
+    height: 5rem;
+  }
+  .half-side_right--proVersion h5 {
+    line-height: 1.5;
+    margin: auto 25%;
+  }
+  .half-side_right .terms {
+    text-align: center;
+    margin: 10px 15% 0 15%;
+  }
+}
+@media screen and (max-width: 320px) {
+  body::before {
+    background-size: contain;
+  }
 }

@@ -29,13 +29,31 @@
         </div>
         <div class="half-side_right--freeTrial">
           <form action="form/submit.php" method="post">
-            <input type="text" value="First Name"><br>
-            <input type="text" value="Last Name"><br>
-            <input type="email" value="Email Address"><br>
-            <input type="text" value="Password"><br>
-            <input type="submit"  value="CLAIM YOUR FREE TRIAL">
+            <div>
+              <input type="text" value="First Name"><br>
+              <img class="warning" src="images/warning.png">
+              <h6 class="warning2">First Name cannot be empty</h6>
+            </div>
+            <div>
+              <input type="text" value="Last Name"><br>
+              <img class="warning" src="images/warning.png">
+              <h6 class="warning2">Last Name cannot be empty</h6>
+            </div>
+            <div>
+              <input type="email" value="Email Address"><br>
+              <img class="warning" src="images/warning.png">
+              <h6 class="warning2">Looks like this is not an email</h6>
+            </div>
+            <div>
+              <input type="text" value="Password"><br>
+              <img class="warning" src="images/warning.png">
+              <h6 class="warning2">Password cannot be empty</h6>
+            </div>
+            <div>
+              <input type="submit"  value="CLAIM YOUR FREE TRIAL">
+            </div>
           </form>
-          <p><h6>By clicking the button, you are agreeing to our <span>Terms and Servises</span></h6></p>
+          <h6 class="terms">By clicking the button, you are agreeing to our <span>Terms and Servises</span></h6>
         </div>
       </div>
     </section>
@@ -43,5 +61,6 @@
   <footer>
 
   </footer>
+  <script src="js/index.js"></script>
 </body>
 </html>

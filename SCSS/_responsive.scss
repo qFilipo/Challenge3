@@ -1,0 +1,56 @@
+@include media-md{
+    .half-side{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &_left{
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@include media-sl{
+    body::before{
+        background-image: url("../../images/bg-intro-mobile.png");
+        background-size: cover;
+    }
+
+    .half-side{
+        &_left{
+            width: 100%;
+            
+            div{
+                width: 100%;
+                text-align: center;
+                h1{
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        &_right{
+            width: 100%;
+
+            &--proVersion{
+                height: 5rem;
+
+                h5{
+                    line-height: 1.5;
+                    margin: auto 25%;
+                }
+            }
+            
+            .terms{
+                text-align: center;
+                margin: 10px 15% 0 15%;
+            }
+        }
+    }
+}
+
+@include media-xs{
+    body::before{
+        background-size: contain;
+    }
+}
